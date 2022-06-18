@@ -1,33 +1,14 @@
-let js = 'amazing';
-console.log(40+8+23-10);
+// LECTURE: Values and Variables
 
-console.log('Ann!');
-console.log(23);
+// ASSIGNMENT:
+// 1. Declare variables called 'country', 'continent' and 'population' and
+// assign their values according to your own country (population in millions)
+// 2. Log their values to the console
 
-let firstName = "Matilda";
-let first = "John";
-let firstNamePerson = "Bob";
-let first_name_person = "Clare";
+let country = "United Kingdom";
+let continent = "Europe";
+let population = "60,000,000";
 
-// Variable names cannot start with a number.
-// let 3year = 35; => This is wrong.
-
-// Variable names cannot contain characters, except $ (dolar sign).
-// let jonas&matilda = "JM"; => This is wrong.
-
-// Variable names cannot contain reserved keywords.
-// let new = 25; => This is wrong.
-
-let $function = 25; // This is allowed. Although there is the function keyword,
-                   // the dolar sign starts the variable name.
-
-console.log($function);
-console.log(first);
-console.log(firstNamePerson);
-console.log(first_name_person);
-
-let myFirstJob = "Coder";
-let myCurrentJob = "Teacher";
-
-console.log(myFirstJob);
-console.log(myCurrentJob);
+console.log(country);
+console.log(continent);
+console.log(population);
