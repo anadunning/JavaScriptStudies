@@ -1,16 +1,17 @@
-// Operator precedence
-const now = 2037;
-const ageJonas = now - 1991;
-const ageSarah = now - 2018;
+// ASSIGNMENT:
+// 1. Declare a variable called 'isIsland' and set its value according to your
+// country. The variable should hold a Boolean value. Also declare a variable
+// 'language', but don't assign it any value yet.
+// 2. Log the types of 'isIsland', 'population', 'country' and 'language'
+// to the console.
 
-console.log(now - 1991 > now - 2018);
+let country = "United Kingdom";
+let continent = "Europe";
+let population = "60,000,000";
+let isIsland = true;
+let language;
 
-let x, y;
-x = y = 25 - 10 - 5;
-console.log(x, y);
-
-const averageAge = (ageJonas  + ageSarah) / 2;
-console.log(ageJonas, ageSarah, averageAge);
-
-// Check the website below for reference:
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+console.log(isIsland);
+console.log(population);
+console.log(country);
+console.log(language);
