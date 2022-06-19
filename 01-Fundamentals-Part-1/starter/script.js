@@ -1,14 +1,19 @@
-// LECTURE: Values and Variables
+let javaScriptIsFun = true;
+console.log(javaScriptIsFun);
 
-// ASSIGNMENT:
-// 1. Declare variables called 'country', 'continent' and 'population' and
-// assign their values according to your own country (population in millions)
-// 2. Log their values to the console
+console.log(typeof javaScriptIsFun);
+console.log(typeof 23);
+console.log(typeof 'Jonas');
 
-let country = "United Kingdom";
-let continent = "Europe";
-let population = "60,000,000";
+javaScriptIsFun = 'YES';
+console.log(typeof javaScriptIsFun);
 
-console.log(country);
-console.log(continent);
-console.log(population);
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 2001;
+console.log(typeof year);
+
+// This is a bug, because null will come up with as an object. However, it is a kind of undefined.
+console.log(typeof null);
