@@ -1,17 +1,17 @@
 // ASSIGNMENT:
-// 1. Set the value of 'language' to the language spoken where you live (some
-// countries have multiple languages, but just choose one).
-// 2. Think about which variables should be const variables (which values will never
-// change, and which might change?). Then, change these variables to const.
-// 3. Try to change one of the changed variables now, and observe what happens.
+// 1. Declare a variable called 'isIsland' and set its value according to your
+// country. The variable should hold a Boolean value. Also declare a variable
+// 'language', but don't assign it any value yet.
+// 2. Log the types of 'isIsland', 'population', 'country' and 'language'
+// to the console.
 
-const country = "United Kingdom";
-const continent = "Europe";
+let isIsland = true;
+let language;
+let country = "United Kingdom";
+let continent = "Europe";
 let population = "60,000,000";
-const isIsland = true;
-const language = "English";
 
-console.log(isIsland);
-console.log(population);
-console.log(country);
-console.log(language);
+console.log(typeof isIsland);
+console.log(typeof population);
+console.log(typeof country);
+console.log(typeof language);
