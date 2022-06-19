@@ -1,43 +1,31 @@
-/* let javaScriptIsFun = true;
-console.log(javaScriptIsFun);
+// Math operators
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas, ageSarah);
 
-console.log(typeof javaScriptIsFun);
-console.log(typeof 23);
-console.log(typeof 'Jonas');
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 
-javaScriptIsFun = 'YES';
-console.log(typeof javaScriptIsFun);
+const firstName = 'John';
+const lastName = 'Smith';
+console.log(firstName, lastName);
+console.log(firstName + lastName);
+console.log(firstName + " " + lastName);
 
-let year;
-console.log(year);
-console.log(typeof year);
+// Assignment operators
+let x = 10 + 5;
+x += 10;
+x *= 4;
+x++;
+x--;
+x--;
+console.log(x);
 
-year = 2001;
-console.log(typeof year);
+// Comparison operators
+console.log(ageJonas > ageSarah);
+console.log(ageSarah >= 18);
 
-// This is a bug, because null will come up with as an object. However, it is a kind of undefined.
-console.log(typeof null);
-*/
+const isFullAge = ageSarah >= 18;
+console.log(isFullAge);
 
-// let, const and var
-// We use let to declare variables that can be changed later.
-// See example below:
-let age = 30;
-// Reasssigning a new value to the variable
-age = 31;
-
-// const: we assign to variables which are not supposed to change at any point.
-// Example:
-const birthYear = 1991;
-// birthYear = 1990; // This will generate an Uncaught TypeError.
-
-// Also, it is not possible to declare an empty const variable, i.e. a const which was not initialized.
-// Example:
-// const job; // This will generate an Uncaught SyntaxError.
-
-// As BEST PRACTICE, use const by default
-// and only use let if you are sure that the variable will change in the future.
-
-// var should be completely avoided. It works in the same way as let.
-var job = 'programmer';
-job = 'teacher';
+console.log(now - 1991 > now - 2018);
