@@ -1,19 +1,24 @@
-// Strings and Template Literals
-const firstName = 'John';
-const job = 'engineer';
-const birthYear = 1990;
-const year = 2030;
+// Making Decisions: if / else Statements
+const age = 15;
+const isOldEnough = age >= 18;
 
-const john = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + ".";
-console.log(john);
+if (isOldEnough) {
+    console.log('Sarah can start driving.');
+}
+else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years.`);
+}
 
-// Using Template literal - using the tick ` and dolar sign $ and curly braces {}
-const johnNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}.`;
-console.log(johnNew);
+// Considering births from 1901:
+const birthYear = 2001;
 
-console.log(`Just a regular string...`);
-console.log('String with \nmultiple \nlines.'); // With the usual quotation marks, we need to use \n to go to the next line.
+let century;
+if (birthYear <= 2000) {
+    century = 20;
+}
+else {
+    century = 21;
+}
 
-console.log(`String with 
-multiple
-lines.`);   // With template literal, we can break the line and the string will accept that.
+console.log(century);
