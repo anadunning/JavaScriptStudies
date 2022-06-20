@@ -1,24 +1,12 @@
-// Making Decisions: if / else Statements
-const age = 15;
-const isOldEnough = age >= 18;
+// 1. Recreate the 'description' variable from the last assignment, this time
+// using the template literal syntax
 
-if (isOldEnough) {
-    console.log('Sarah can start driving.');
-}
-else {
-    const yearsLeft = 18 - age;
-    console.log(`Sarah is too young. Wait another ${yearsLeft} years.`);
-}
+const country = "United Kingdom";
+const language = "English";
+const continent = "Europe";
+const isIsland = true;
 
-// Considering births from 1901:
-const birthYear = 2001;
+let population = 60;
+let description = `${country} is in ${continent}, and its ${population} million people speak ${language}.`;
 
-let century;
-if (birthYear <= 2000) {
-    century = 20;
-}
-else {
-    century = 21;
-}
-
-console.log(century);
+console.log(description); 
