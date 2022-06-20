@@ -1,29 +1,24 @@
-// ASSIGNMENT:
-// 1. If your country split in half, and each half would contain half the population,
-// then how many people would live in each half?
-// 2. Increase the population of your country by 1 and log the result to the console
-// 3. Finland has a population of 6 million. Does your country have more people than
-// Finland?
-// 4. The average population of a country is 33 million people. Does your country
-// have less people than the average country?
-// 5. Based on the variables you created, create a new variable 'description'
-// which contains a string with this format: 'Portugal is in Europe, and its 11 million
-// people speak portuguese'.
+// Coding Challenge #1
+// Mark and John are trying to compare their BMI (Body Mass Index), which is
+// calculated using the formula:
+// BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter).
+// Your tasks:
+// 1. Store Mark's and John's mass and height in variables
+// 2. Calculate both their BMIs using the formula (you can even implement both versions).
+// 3. Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
+// Test data:
+// § Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+// § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 
-const country = "United Kingdom";
-const language = "English";
-const continent = "Europe";
-const isIsland = true;
+let massMark = 95;
+let heightMark = 1.88;
+let massJohn = 85;
+let heightJohn = 1.76;
 
-let population = 60;
-console.log(population / 2);
+let BMI_Mark = massMark / (heightMark ** 2);
+let BMI_John = massJohn / (heightJohn * heightJohn);
 
-population++;
-console.log( population);
+let markHigherBMI = BMI_Mark > BMI_John;
 
-console.log(population > 6);
-console.log(population < 33);
-
-let description = country + " is in " + continent + ", and its " + population + " million people speak " + language + ".";
-
-console.log(description);
+console.log(typeof markHigherBMI);
+console.log(BMI_Mark, BMI_John, markHigherBMI);
