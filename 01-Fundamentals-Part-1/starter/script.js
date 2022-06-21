@@ -1,29 +1,30 @@
-// Type conversion (Manually)
-const inputYear = '1991';
-console.log(Number(inputYear), inputYear);
+// Truthy and Falsy
+// 5 falsy values: 0, '', undefined, null, NaN
 
-console.log(Number(inputYear) + 18);
-console.log(Number('John'));
+// When checking with Boolean, all these will be false.
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
 
-console.log(typeof NaN); // NaN is a kind of number, but invalid.
-console.log(String(23), 23);
+// Any string will be a true value, as well as for an empty object.
+console.log(Boolean('John'));
+console.log(Boolean({}));
 
-// Type coercion
-// The number 25 is converted automatically to string.
-console.log('I am ' + 25 + ' years old.');
+const money = 0;  // Zero is converted to false.
+if (money) {
+    console.log("Don't spend it all.");
+}
+else {
+    console.log("You should get a job.");
+}
 
-// The minus operator triggers the coercion and the strings are converted to numbers.
-console.log('23' - '10' - 3);
+let height = 0; // The value 0 is accepted for height, but it'll come up as false.
 
-// The plus operator converts the number 3 to string and concatenates the three strings.
-console.log('23' + '10' + 3);
-
-// The multiplication operator converts the string to number.
-console.log('23' * '2');
-
-// The same for dividing
-console.log('23' / '2');
-
-let n = '1' + 1;
-n = n - 1;
-console.log(n);
+if (height) {
+    console.log("Yes! Height is defined.");
+}
+else {
+    console.log("Height is UNDEFINED!");
+}
