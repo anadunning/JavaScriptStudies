@@ -1,30 +1,29 @@
-// Truthy and Falsy
-// 5 falsy values: 0, '', undefined, null, NaN
+// Equality Operators == vs ===
+const age = 18;
 
-// When checking with Boolean, all these will be false.
-console.log(Boolean(0));
-console.log(Boolean(''));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(NaN));
+if (age === 18) console.log('You just became an adult. (strict)');
 
-// Any string will be a true value, as well as for an empty object.
-console.log(Boolean('John'));
-console.log(Boolean({}));
+if (age == 18) console.log('You just became an adult. (loose)');
 
-const money = 0;  // Zero is converted to false.
-if (money) {
-    console.log("Don't spend it all.");
+// As a general rule for a clean code, avoid using the loose
+// operator == as much as you can.
+// Always compare using the strict operator ===.
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+    console.log('Cool! 23 is an amazing number!');
+}
+else if (favourite === 7) {
+    console.log('7 is also a cool number!');
+}
+else if (favourite === 9) {
+    console.log('9 is also a cool number!');
 }
 else {
-    console.log("You should get a job.");
+    console.log('The number is not 23 neither 7 nor 9.');
 }
 
-let height = 0; // The value 0 is accepted for height, but it'll come up as false.
-
-if (height) {
-    console.log("Yes! Height is defined.");
-}
-else {
-    console.log("Height is UNDEFINED!");
-}
+if (favourite !== 23) console.log('Why not 23?');
