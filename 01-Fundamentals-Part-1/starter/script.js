@@ -1,29 +1,28 @@
-// Equality Operators == vs ===
-const age = 18;
+// 1. Declare a variable 'numNeighbours' based on a prompt input like this:
+// prompt('How many neighbour countries does your country have?');
+// 2. If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality
+// == for now)
+// 3. Use an else-if block to log 'More than 1 border' in case 'numNeighbours'
+// is greater than 1
+// 4. Use an else block to log 'No borders' (this block will be executed when
+// 'numNeighbours' is 0 or any other value)
+// 5. Test the code with different values of 'numNeighbours', including 1 and 0.
+// 6. Change == to ===, and test the code again, with the same values of
+// 'numNeighbours'. Notice what happens when there is exactly 1 border! Why
+// is this happening?
+// 7. Finally, convert 'numNeighbours' to a number, and watch what happens now
+// when you input 1
+// 8. Reflect on why we should use the === operator and type conversion in this
+// situation
 
-if (age === 18) console.log('You just became an adult. (strict)');
+const numNeighbours = Number(prompt('How many neighbour countries does your country have?'));
 
-if (age == 18) console.log('You just became an adult. (loose)');
-
-// As a general rule for a clean code, avoid using the loose
-// operator == as much as you can.
-// Always compare using the strict operator ===.
-
-const favourite = Number(prompt("What's your favourite number?"));
-console.log(favourite);
-console.log(typeof favourite);
-
-if (favourite === 23) {
-    console.log('Cool! 23 is an amazing number!');
+if (numNeighbours === 1) {
+    console.log('Only 1 border!');
 }
-else if (favourite === 7) {
-    console.log('7 is also a cool number!');
-}
-else if (favourite === 9) {
-    console.log('9 is also a cool number!');
+else if (numNeighbours > 1) {
+    console.log('More than 1 border.');
 }
 else {
-    console.log('The number is not 23 neither 7 nor 9.');
+    console.log('No borders.');
 }
-
-if (favourite !== 23) console.log('Why not 23?');
