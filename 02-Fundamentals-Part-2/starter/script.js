@@ -1,14 +1,22 @@
-// Functions Calling Other Functions
-function cutFruitPieces(fruit) {
-    return fruit * 4;
+// Reviewing Functions
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
 }
 
-function fruitProcessor(apples, oranges) {
-    const applePieces = cutFruitPieces(apples);
-    const orangePieces = cutFruitPieces(oranges);
+const yearsUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear); // Function being called inside a function
+    const retirement = 65 - age;
 
-    const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
-    return juice;
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return retirement; // The function will finish here in the return.
+                          //  So, if you add the console.log after the return nothing will displayed in the console as the code won't be reached.
+    }
+    else {
+        console.log(`${firstName} has already retired.`);  // console.log needs to come before the return in this case here.
+        return -1;
+    }
 }
 
-console.log(fruitProcessor(2, 3));
+console.log(yearsUntilRetirement(1991, 'John'));
+console.log(yearsUntilRetirement(1950, 'Mike'));
