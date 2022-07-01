@@ -1,45 +1,41 @@
-// Introduction to Objects
-// array
-const jonasArray = [
-    'Jonas',
-    'Schmedtmann',
-    2037 - 1991,
-    'teacher',
-    ['Michael', 'Peter', 'Steven']
-];
-
+// Object Methods
 // object
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
-    age: 2037 - 1991,
+    birthYear: 1991,
     job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    // Function expression - obs.: function declaration doesn't work here
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // },
+
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2037 - this.birthYear;   // Using this keyword, we don't need to pass the parameter anymore.
+    // },                                  //  this keyword gets the value from the object birthYear
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver\'s licence}.`
+    }
 };
-console.log(jonas);
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
 
-// Using the bracket notation
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
+console.log(jonas.calcAge());
 
-const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
-console.log(jonas[interestedIn]);
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
 
-if (jonas[interestedIn]) {
-    console.log(jonas[interestedIn]);
-}
-else {
-    console.log('Wrong request! Choose between firstName, lastName, age, job and friends');
-}
-
-// Adding more elements to the object
-jonas.location = 'Portugal';
-jonas['twitter'] = '@jonasschmedtman';
-console.log(jonas);
+console.log(jonas['calcAge']());
 
 // Challenge
-// "Jonas has 3 friends, and his best friend is called Michael."
-console.log(`${jonas['first' + nameKey]} has ${jonas.friends.length} friends, and his best friends is called ${jonas.friends[0]}.`);
+// "Jonas is a 46-year old teacher, and he has a driver's licence."
+console.log(jonas.getSummary());
