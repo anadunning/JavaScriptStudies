@@ -1,22 +1,20 @@
-// Looping Backwards and Loops in Loops
-const jonasArray = [
-    'Jonas',
-    'Schmedtmann',
-    2037 - 1991,
-    'teacher',
-    ['Michael', 'Peter', 'Steven']
-];
-
-for (let i = jonasArray.length - 1; i >= 0; i--) {
-    // Reading from jonasArray backwards
-    console.log(i, jonasArray[i]);
+// While Loop
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weight repetition ${rep}`);
 }
 
-// Looping inside a loop
-for (let exercise = 1; exercise < 4; exercise++) {
-    console.log(`--------- Starting exercise #${exercise}`);
+let rep = 1;
+while (rep <= 10) {
+    console.log(`WHILE: Lifting weight repetition ${rep}`);
+    rep++;
+}
 
-    for (let rep = 1; rep < 6; rep++) {
-        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
-    }
+// The while loop does not depend on a counter. See below. Random numbers
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}.`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('Loop is about to end...');
 }
