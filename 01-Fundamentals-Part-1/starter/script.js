@@ -1,18 +1,27 @@
-// ASSIGNMENT: Ternary Operator
-// 1. If your country's population is greater than 33 million, use the ternary operator
-// to log a string like this to the console: 'Portugal's population is above average'.
-// Otherwise, simply log 'Portugal's population is below average'. Notice how only
-// one word changes between these two sentences!
-// 2. After checking the result, change the population temporarily to 13 and then to
-// 130. See the different results, and set the population back to original.
+// ASSIGNMENT: Functions
+// 1. Write a function called 'describeCountry' which takes three parameters:
+// 'country', 'population' and 'capitalCity'. Based on this input, the
+// function returns a string with this format: 'Finland has 6 million people and its
+// capital city is Helsinki'
+// 2. Call this function 3 times, with input data for 3 different countries. Store the
+// returned values in 3 different variables, and log them to the console.
 
 const country = "UK";
 const population = 60;
+const capitalCity = "London";
 
-population > 33
-  ? console.log(`${country}'s population is above average.`)
-  : console.log(`${country}'s population is below average.`);
+function describeCountry(country, population, capitalCity) {
+  return `${country} has ${population} million people and its capital city is ${capitalCity}.`;
+}
 
-console.log(
-  `${country}'s population is ${population > 33 ? "above" : "below"} average.`
-);
+console.log(describeCountry(country, population, capitalCity));
+console.log(describeCountry("France", 55, "Paris"));
+console.log(describeCountry("USA", 220, "Washington"));
+console.log(describeCountry("Brazil", 190, "Brasilia"));
+console.log(describeCountry("Portugal", 50, "Lisbon"));
+
+// Jonas' Answer:
+const descPortugal = describeCountry("Portugal", 10, "Lisbon");
+const descGermany = describeCountry("Germany", 83, "Berlin");
+const descFinland = describeCountry("Finland", 6, "Helsinki");
+console.log(descPortugal, descGermany, descFinland);
