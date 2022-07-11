@@ -1,32 +1,25 @@
-// ASSIGNMENT: Functions Calling Other Functions
-// 1. Create a function called 'describePopulation'. Use the function type you
-// like the most. This function takes in two arguments: 'country' and
-// 'population', and returns a string like this: 'China has 1441 million people,
-// which is about 18.2% of the world.'
-// 2. To calculate the percentage, 'describePopulation' call the
-// 'percentageOfWorld1' you created earlier
-// 3. Call 'describePopulation' with data for 3 countries of your choice.
+// ASSIGNMENT: Introduction to Arrays
+// 1. Create an array containing 4 population values of 4 countries of your choice.
+// You may use the values you have been using previously. Store this array into a
+// variable called 'populations'.
+// 2. Log to the console whether the array has 4 elements or not (true or false).
+// 3. Create an array called 'percentages' containing the percentages of the
+// world population for these 4 population values. Use the function
+// 'percentageOfWorld1' that you created earlier to compute the 4
+// percentage values.
 
-function percentageOfWorld1(population) {
-  return (population / 7900) * 100;
+const populations = [83.24, 45.38, 144.1, 220.9];
+const percentages = [];
+
+console.log(populations);
+console.log(populations.length === 4);
+
+function percentageOfWorld1(populations) {
+  return (populations / 7900) * 100;
 }
 
-const describePopulation = (country, population) => {
-  return `${country} has ${population} million people which is about ${percentageOfWorld1(
-    population
-  )} % of the world.`;
-};
+for (let i = 0; i < populations.length; i++) {
+  percentages.push(percentageOfWorld1(populations[i]));
+}
 
-const describeIndia = describePopulation("India", 212.6);
-const describeChina = describePopulation("China", 1441);
-const describeUSA = describePopulation("The USA", 329);
-const describeBrazil = describePopulation("Brazil", 212.6);
-const describeCanada = describePopulation("Canada", 38.01);
-const describeUK = describePopulation("The UK", 67.22);
-
-console.log(describeIndia);
-console.log(describeChina);
-console.log(describeUSA);
-console.log(describeBrazil);
-console.log(describeCanada);
-console.log(describeUK);
+console.log(percentages);
