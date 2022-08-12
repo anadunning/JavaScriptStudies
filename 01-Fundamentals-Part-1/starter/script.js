@@ -24,19 +24,11 @@ const myCountry = {
   ],
 };
 
-console.log(
-  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
-);
+const jonas = {
+  firstName: "John",
+  lastName: "Smith",
+};
 
-const newPop = myCountry.population + 2;
-console.log(newPop);
-
-const lessPop = myCountry["population"] - 2;
-console.log(lessPop);
-
-// Jonas's answer:
-myCountry.population += 2;
-console.log(myCountry.population);
-
-myCountry["population"] -= 2;
-console.log(myCountry["population"]);
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
