@@ -221,30 +221,36 @@ add(...x);
 restaurant.orderPizza('tomatoes', 'cheese', 'ham', 'sweet corn');
 restaurant.orderPizza('cheese');
 
-console.log('---- OR ---- ');
+// console.log('---- OR ---- ');
 // Use ANY data type, return ANY data type:
 // Short-circuiting or short circuit evaluation
-console.log(3 || 'Jonas');
-console.log('' || 'Jonas');
-console.log(true || 0);
-console.log(undefined || null);
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas');
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
-restaurant.numGuests = 23;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
+// restaurant.numGuests = 23;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
 
-const guests2 = restaurant.numGuests || 10;
-console.log(guests2);
+// THE NULLISH COALESCING OPERATOR (??)
+// restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests); // Answer is 10.
 
-console.log('---- AND ---- ');
-console.log(0 && 'Jonas');
-console.log(7 && 'Jonas');
+// Nullish: null and undefined (NOT 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
 
-console.log('Hello' && 23 && null && 'jonas');
+// console.log('---- AND ---- ');
+// console.log(0 && 'Jonas');
+// console.log(7 && 'Jonas');
 
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('basil', 'spinach');
-}
+// console.log('Hello' && 23 && null && 'jonas');
 
-restaurant.orderPizza && restaurant.orderPizza('basil', 'spinach');
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('basil', 'spinach');
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza('basil', 'spinach');
